@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals, and what they eat</title>
+    <style>
+        /* some initial cosmetics */
+        h1,h2,h3 {
+            margin: 0px;
+            text-align: center;
+        }
+
+        h3 { font-size: 1.1rem; }
+        h2 { font-size: 1.2rem; }
+        h1 { font-size: 1.4rem; }
+
+        .habitat {
+            min-height: 6rem;
+            background: linear-gradient(to bottom, #30c7e5 26%,#30c7e5 26%,#d1ac51 48%,#d1ac51 49%,#25a808 49%,#00a800 59%,#eaae17 68%,#eaae17 71%,#0e0a6d 86%,#0e0a6d 86%,#1e0e56 100%); 
+            /* https://www.colorzilla.com/gradient-editor/ */
+        }
+
+        section {
+            border: 1px solid black;
+        }
+
+        /* the species of the animal kingdom are split into groups, 
+        we look only at mammalia and group all the rest as 'others' */
+        .animal-kingdom {
+            /* little cosmetics */
+            background-color: lightblue;
+            /* make the animal kingdom a Flexbox container */
+
+
+            /* arrange the groups (mammalia/others) in a row*/
+
+
+            /* on low screen size let it wrap */
+
+        }
+
+        .food-habits {
+            background-color: coral;
+            padding: 1%;
+        }
+
+        /* two groups should display next to each other */
+        .animal-kingdom > section {
+            /* little cosmetics */
+            padding: 10px;
+            /* give a basis size for the item, to fulfill 
+            the planned layout */
+
+            /* if there is still space left, let the items
+            consume the rest of the additional available space*/
+
+        }
+
+        /* the container that holds the food habits (for mammalia and others) */
+        section.food-habits {
+            /* make the food-habits section a Flexbox container */
+
+            /* should line up horizontally (left-to-right) to each other */ 
+
+            /* if needed (e.g. on small screens) the items should wrap */
+
+        }
+
+        .food-habits > section.food {
+            /* three food-habits should fit next to each other 
+            consider a useful basis size for the item */
+
+            
+            /* if there is space left, let the item consume the 
+            rest of the available space */
+  
+            
+
+            /* if less animals live here than in other food habitats
+            let the area shrink, to give other animals more space to
+            multiply */
+
+            
+        }
+
+        /* cosmetic */
+        .food header h3 {
+            background-color: white;
+        }
+
+        ul.habitat {
+            /* little cosmetics */
+            list-style: none;
+            margin: 0px;
+            padding: 1vw;
+
+            /* let a habitat control the arrangement of the animals */
+
+
+            /* set up the animals from left to right */
+
+            
+            /* distribute the animals evenly in the world */
+
+
+            /* by default they live on the ground (middle of background gradient) */
+
+
+            /* let the habitat shrink, if others need more space */
+
+            /* let the habitat grow, if there are more animals then elsewhere*/
+
+        }
+
+        .water {
+            /* put the water living animals to the bottom of their habitat */
+
+        }
+
+        .sky {
+            /* put the sky-hunting animals to the top of the habitat */
+
+        }
+
+        /* little cosmetics to display the emojis bigger */
+        ul > li {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Animal kingdom</h1></header>
+    <main class="animal-kingdom">
+        <section class="species-group">
+            <header><h2>Mammals</h2></header>
+            <section class="food-habits">
+                <section class="food">
+                    <header><h3>herbivores</h3></header>
+                    <ul class="habitat">
+                       <!--mammal herbivores-->
+                    </ul>
+                </section>
+
+                <section class="food">
+                    <header><h3>omnivores</h3></header>
+                    <ul class="habitat">
+                        <!--mammal omnivores-->>
+                    </ul>
+                </section>
+
+                <section class="food">
+                    <header><h3>carnivores</h3></header>
+                    <ul class="habitat">
+                        <!-- mammal carnivores -->
+                        <!-- this is the example of the front-end developer
+                            the list items hold an emoji by default
+                            the title attribute (tool tip) holds the animal name
+                            for flying animals, the item will carry a class "sky"
+                            for swimming animals, the item will carry a class "water"
+                        -->
+                        <li title="lion">🦁</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <section class="species-group">
+            <header><h2>Others (non mammals)</h2></header>
+            <section class="food-habits">
+                <section class="food">
+                    <header><h3>herbivores</h3></header>
+                    <ul class="habitat">
+                        <!-- non mammalia herbivores -->
+                    </ul>
+                </section>
+
+                <section class="food">
+                    <header><h3>omnivores</h3></header>
+                    <ul class="habitat">
+                        <!-- non mammalia omnivores -->
+                    </ul>
+                </section>
+
+                <section class="food">
+                    <header><h3>carnivores</h3></header>
+                    <ul class="habitat">
+                        <!-- non mammalia carnivores -->
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+    </main>
+</body>
+</html>
